@@ -1,0 +1,20 @@
+# Toolchains / downloaded dependencies (recreated by tools/setup_toolchain.sh
+# and tools/build_engine_3d.sh; too large for git)
+vendor/
+
+# Build outputs
+build/
+dist/**
+!dist/LAPY00001-parts/
+!dist/LAPY00001-parts/icon0.png
+*.pck
+*.elf
+*.zip
+
+# Godot editor cache
+game/.godot/
+*.import
+
+# macOS
+.DS_Store
+*.bak

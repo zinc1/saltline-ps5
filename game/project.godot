@@ -1,0 +1,40 @@
+﻿; Saltline 鈥?native Godot 4.7.2 port for PS5 (GodotPS5 GLES3 runtime)
+config_version=5
+
+[application]
+config/name="Saltline"
+run/main_scene="res://main3d.tscn"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+boot_splash/show_image=false
+boot_splash/bg_color=Color(0.043, 0.051, 0.059, 1)
+
+[autoload]
+Boot="*res://src/core/boot.gd"
+Game="*res://src/core/game.gd"
+Pad="*res://src/core/pad.gd"
+Haptics="*res://src/core/haptics.gd"
+Sfx="*res://src/audio/sfx.gd"
+
+[display]
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=3
+window/size/window_width_override=1920
+window/size/window_height_override=1080
+window/stretch/mode="canvas_items"
+window/vsync/vsync_mode=1
+
+[input_devices]
+pointing/emulate_touch_from_mouse=false
+pointing/emulate_mouse_from_touch=false
+
+[physics]
+common/physics_ticks_per_second=60
+
+[rendering]
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+anti_aliasing/quality/msaa_3d=0
+lights_and_shadows/directional_shadow/size=1024
+lights_and_shadows/directional_shadow/soft_shadow_filter_quality=0
+environment/defaults/default_clear_color=Color(0.043, 0.051, 0.059, 1)

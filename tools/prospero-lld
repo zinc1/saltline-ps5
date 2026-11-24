@@ -1,0 +1,4 @@
+#!/bin/sh
+# PS5 linker shim: Apple clang looks up "prospero-lld" on PATH for
+# -target x86_64-sie-ps5; zig ships a complete LLD driver.
+exec "${PYTHON:-/usr/bin/python3}" -m ziglang ld.lld "$@"
